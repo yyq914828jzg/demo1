@@ -10,8 +10,10 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  created () {
+      let store = this.$store;
+      this.$store.dispatch('menu/nameChange',"lisi")
+      console.log( this.$store.state.menu.name)
+  },
 }
 </script>

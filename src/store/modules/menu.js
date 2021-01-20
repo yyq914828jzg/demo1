@@ -3,32 +3,23 @@
 
 // state
 const state = {
-    date: '',
-    naDept: '',
-    sdDept: '',
-    raTrans: '',
-    euNwtp: ''
+    name:"zhangsan"
 };
 
 // actions
 const actions = {
-    
+    nameChange({ commit },status) {
+        state.name = status;
+        commit("nameChange",status)
+    }
 
 }
 
 // mutations
 const mutations = {
-    //日期变化
-    dateChange(state, status) {
-        state.date = status;
-    },
-    //科室变化
-    sdDeptChange(state, status) {
-        state.naDept = status.name;
-        state.sdDept = status.code;
-        state.raTrans = status.raTrans;
-        state.euNwtp = status.euNwtp;
-    },
+    nameChange(state,status) {
+        state.name = status;
+    }
 };
 
 export default {

@@ -1,6 +1,3 @@
-// const config:any = JSON.parse((process as any).env.npm_config_argv).original.slice(1);
-// http://59.110.68.181:8086/
-// http://192.168.199.100:7099/
 const config = {
     development: {
         API_URL: `${window.location.origin}/fmsApiTest`,
