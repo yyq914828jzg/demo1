@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-
-
 // state
 const state = {
     name:"zhangsan"
