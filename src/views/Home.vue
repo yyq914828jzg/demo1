@@ -1,6 +1,13 @@
 <template>
   <div class="home">
-    <el-button>11111</el-button>
+    <!-- <div @click="btn">点击</div> -->
+    <component v-bind:is="'HelloWorld'" title="1111">
+        <template v-slot:header="{text}">
+            头部{{text}}
+        </template>
+    </component>
+    
+    <router-link to="/jsx">jsx</router-link>
   </div>
 </template>
 
@@ -10,10 +17,38 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  created () {
-      let store = this.$store;
-      this.$store.dispatch('menu/nameChange',"lisi")
-      console.log( this.$store.state.menu.name)
+  components: {
+    HelloWorld
+  },
+  data() {
+      return {
+          dd: "left"
+      }
+  },
+  directives: {
+      focus: {
+          inserted(el,binding,vnode){
+              console.log(el)
+              console.log(binding)
+              console.log(vnode)
+              if(binding.modifiers.a){
+                  el.innerHTML ="women"
+              }else{
+                  el.innerHTML=binding.value;
+                  el.style.color = binding.value.color;
+              }
+              
+              el.focus()
+          }
+      },
+      ee(el,binding){
+          el.innerHTML = binding.value;
+      }
+  },
+  methods: {
+      btn() {
+          
+      }
   },
 }
 </script>
