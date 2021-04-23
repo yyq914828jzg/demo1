@@ -22,7 +22,12 @@ const routes = [
     path: '/jsx',
     name: 'jsx',
     component: () => import(/* webpackChunkName: "jsx" */ '../views/jsx/index.vue')
-  }
+  },
+  {
+    path: '/source',
+    name: 'source',
+    component: () => import(/* webpackChunkName: "source" */ '../views/source/index.vue')
+  },
 ]
 
 const router = new VueRouter({

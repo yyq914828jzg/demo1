@@ -1,24 +1,26 @@
 <template>
   <div class="home">
+      <vue-demo></vue-demo>
     <!-- <div @click="btn">点击</div> -->
-    <component v-bind:is="'HelloWorld'" title="1111">
+    <!-- <component v-bind:is="'HelloWorld'" title="1111">
         <template v-slot:header="{text}">
             头部{{text}}
         </template>
-    </component>
+    </component> -->
     
     <router-link to="/jsx">jsx</router-link>
+    <router-link to="/source">源码区</router-link>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    // HelloWorld
   },
   data() {
       return {
