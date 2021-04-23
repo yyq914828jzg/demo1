@@ -13,6 +13,7 @@ import test from './views/Notice/index.js';
 Vue.use(test)
 import tests from './views/Notice/notice.js';
 Vue.use(tests)
+console.log(1)
 // document.addEventListener('click',(el)=>{
 //     alert(1)
 //     console.log(el)
