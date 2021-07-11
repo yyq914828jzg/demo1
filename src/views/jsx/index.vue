@@ -10,6 +10,9 @@ import demo from './components/demo1.vue'
     export default {
         components: {
             demo
+        },
+        created(){
+            this.aa()
         }
     }
 </script>

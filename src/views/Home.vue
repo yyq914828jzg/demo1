@@ -7,9 +7,20 @@
             头部{{text}}
         </template>
     </component> -->
-    
-    <router-link to="/jsx">jsx</router-link>
-    <router-link to="/source">源码区</router-link>
+    <ul>
+        <li>
+             <router-link to="/jsx">jsx</router-link>
+        </li>
+        <li>
+             <router-link to="/source">源码区</router-link>
+        </li>
+        <li>
+             <router-link to="/vuex">vuex源码3</router-link>
+        </li>
+    </ul>
+   
+   
+
   </div>
 </template>
 

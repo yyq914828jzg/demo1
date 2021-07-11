@@ -28,6 +28,11 @@ const routes = [
     name: 'source',
     component: () => import(/* webpackChunkName: "source" */ '../views/source/index.vue')
   },
+  {
+    path: '/vuex',
+    name: 'vuex',
+    component: () => import(/* webpackChunkName: "vuex" */ '../views/vuex/index.vue')
+  },
 ]
 
 const router = new VueRouter({
